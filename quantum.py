@@ -1,15 +1,19 @@
 '''
 Quantum
 A wrapper for kiteconnect
+Algorithmic trading module for NSE-India via pykiteconnect & zerodha
 '''
-
+#Importing necessary libraries
 import webbrowser as wb
 import pandas as pd
 from kiteconnect import KiteConnect,WebSocket
+
+#api_key,api_secret,user_id given by zerodha
+#store it in the working directory in a file called credential 
 api_key,api_secret,user_id = open('credential','r+').read().strip('\n').split(',')
 kite = KiteConnect(api_key=api_key)
 login_url = kite.login_url()
-wb.open(login_url)
+wb.open(login_url) 
 
 
 
