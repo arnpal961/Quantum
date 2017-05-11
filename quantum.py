@@ -31,7 +31,6 @@ with open('auth_data.txt','r+') as f:
 #Retrieve instruments token
 instrument = kite.instruments()
 instrument = pd.DataFrame(instrument)
-instrument = instrument[instrument.exchange!= 'BSE']
 
 
 #Saving to local file
